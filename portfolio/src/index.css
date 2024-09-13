@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: rgb(23, 21, 71);
+  padding: 0;
+  margin: 0;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+/* Header Styling */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  font-family: Ubuntu;
+  font-weight: 700;
+  color: #F1CF27
+}
+header h1 {
+  padding: 10px;
+  margin: 0;
+  margin-left: 20px;
+  font-size: 30pt;
+}
+
+.dropdown {
+  position: relative; /* Ensure parent element is positioned relative for absolute children */
+  margin-right: 50px;
+  border-radius: 50px;
+  font-size: 10pt;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  
+}
+
+/* Pseudo-element for styling, such as an arrow */
+.dropdown::after {
+  content: ''; /* Required for pseudo-elements */
+  position: absolute;
+  top: 0px; 
+  right: 00px; 
+  height: 100%; 
+  width: 0; 
+ 
+  border-style: solid;
+  transition: all 1s;
+  background-color: #F17F27;
+  border-color: #F17F27;
+}
+
+.dropdown.show::after {
+  content: ''; /* Required for ::after to work */
+  position: absolute;
+  height: 391.5%;
+  top: 0;
+  transition: all 1s;
+}
+
+.dropdown-menu {
+  list-style: none;
+  font-size: large;
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  text-align: right;
+  right: 15px;
+  top: 40px;
+  gap: 20px;
+  font-size: 20pt;
+}
+.dropdown.show .dropdown-menu {
+  display: flex;
+
+}
+.dropdown-menu a {
+  text-decoration: none;
+  color: #F1CF27;
+  transition: all 0.5s;
+  
+}
+#menuText {
+  position: absolute;
+  right: 35px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  font-size: 25pt;
+
+}
+@keyframes underlineAnimation1 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 90%;
+  }
+}
+
+@keyframes underlineAnimation2 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 115%;
+  }
+}
+
+@keyframes underlineAnimation3 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 110%;
+  }
+}
+
+.dropdown-item {
+  position: relative; /* Required for ::after positioning */
+}
+
+
+.dropdown-item::after {
+  content: ''; /* Required for pseudo-elements */
+  position: absolute;
+  height: 5px;
+  width: 0; /* Start hidden */
+  bottom: 0; /* Position at the bottom */
+  right: -10px; /* Align with the right edge */
+  top: 30px;
+  transform-origin: right; /* Scale from the right edge */
+  animation: none; /* Initially no animation */
+}
+
+
+
+
+
+#Link1::after {
+  animation: underlineAnimation1 0.5s ease forwards; /* Apply animation */
+  animation-delay: 0.3s;
+  background-color: #F17F27;
+
+}
+#Link2::after {
+  animation: underlineAnimation2 0.5s ease forwards; /* Apply animation */
+  animation-delay: 0.6s;
+  background-color: #F17F27;
+
+}
+#Link3::after {
+  animation: underlineAnimation3 0.5s ease forwards; /* Apply animation */
+  animation-delay: 0.9s;
+  background-color: #F17F27;
+
+}
+
+
+
+
+
+
+
+.material-symbols-outlined {
+  transform: scale(1.5);
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+
+
+
+
+
+/* Banner Styling */
+#Home {
+  display: flex;
+  justify-content: center;
+  font-family: Ubuntu;
+}
+.Banner {
+  position: relative;
+  margin-top: 150px;
+  width: 80%;
+  height: 500px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#BannerImg {
+  width: 40%;
+  max-width: 500px;
+  height: 80%;
+  background-color: #F17F27;
+}
+#BannerText {
+  max-width: 700px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#BannerText div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;  
+}
+#BannerText h2 {
+  font-size: 5vw;
+  font-weight: 700;
+  color: #F1CF27;
+}
+@media screen and (min-width: 1280px) {
+
+  #BannerText h2 {
+    font-size: 50pt;
+  }
+}
+
+#Front-End {
+  left: 20px;
+  top: 50px;
+  font-family: Ubuntu;
+}
+
+#UI-UX {
+  left: 400px;
+  top: 50px;
+  font-family: Ubuntu;
+}
+
+#BigSlash {
+  margin-left: 20px;
+  transform:rotate(15deg);
+  height: 180px;
+  width: 20px;
+  background-color: #F17F27;
+}
+#BannerText p {
+  position: relative;
+  font-size: 20pt;
+  font-weight: 500;
+  width: 80%;
+  color: #f14f27;
+}
+
+
+@media screen and (max-width: 480px) {
+  header h1 {
+    font-size: 20pt;
+  }
+  .Banner {
+    flex-direction: column-reverse;
+    background-color: antiquewhite;
+
+  }
+}
+
+
