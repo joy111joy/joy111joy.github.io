@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap');
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -6,15 +7,24 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: rgb(23, 21, 71);
+  background: #000000;
   padding: 0;
   margin: 0;
+  background-image: url('assets/img/Stars.svg');
+  background-repeat: repeat;
+  height: 3000px;
+  
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+/* Scroll Animations */
+
+
 
 
 /* Header Styling */
@@ -24,9 +34,9 @@ header {
   justify-content: space-between;
   align-items: center;
   height: 100px;
-  font-family: Ubuntu;
+  font-family: Jura;
   font-weight: 700;
-  color: #F1CF27
+  color: #ffffff
 }
 header h1 {
   padding: 10px;
@@ -57,14 +67,14 @@ header h1 {
  
   border-style: solid;
   transition: all 1s;
-  background-color: #F17F27;
-  border-color: #F17F27;
+  background-color: #9327f1;
+  border-color: #9327f1;
 }
 
 .dropdown.show::after {
   content: ''; /* Required for ::after to work */
   position: absolute;
-  height: 391.5%;
+  height: 400%;
   top: 0;
   transition: all 1s;
 }
@@ -87,13 +97,13 @@ header h1 {
 }
 .dropdown-menu a {
   text-decoration: none;
-  color: #F1CF27;
+  color: #ffffff;
   transition: all 0.5s;
   
 }
 #menuText {
   position: absolute;
-  right: 35px;
+  right: 55px;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -131,6 +141,7 @@ header h1 {
 
 .dropdown-item {
   position: relative; /* Required for ::after positioning */
+  opacity: 0;
 }
 
 
@@ -140,139 +151,313 @@ header h1 {
   height: 5px;
   width: 0; /* Start hidden */
   bottom: 0; /* Position at the bottom */
-  right: -10px; /* Align with the right edge */
+  right: -15px; /* Align with the right edge */
   top: 30px;
   transform-origin: right; /* Scale from the right edge */
   animation: none; /* Initially no animation */
 }
 
 
-
-
+.dropdown.show .dropdown-item {
+  opacity: 1;
+  animation: fadeIn 0.5s ease forwards; /* Apply animation */
+}
 
 #Link1::after {
   animation: underlineAnimation1 0.5s ease forwards; /* Apply animation */
   animation-delay: 0.3s;
-  background-color: #F17F27;
+  background-color: #9327f1;
 
 }
 #Link2::after {
   animation: underlineAnimation2 0.5s ease forwards; /* Apply animation */
   animation-delay: 0.6s;
-  background-color: #F17F27;
+  background-color: #9327f1;
 
 }
 #Link3::after {
   animation: underlineAnimation3 0.5s ease forwards; /* Apply animation */
   animation-delay: 0.9s;
-  background-color: #F17F27;
+  background-color: #9327f1;
 
 }
 
 
-
-
-
-
-
-.material-symbols-outlined {
-  transform: scale(1.5);
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 24
-}
-
-
-
-
-
-
-/* Banner Styling */
-#Home {
-  display: flex;
-  justify-content: center;
-  font-family: Ubuntu;
-}
-.Banner {
-  position: relative;
-  margin-top: 150px;
-  width: 80%;
-  height: 500px;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-}
-#BannerImg {
-  width: 40%;
-  max-width: 500px;
-  height: 80%;
-  background-color: #F17F27;
-}
-#BannerText {
-  max-width: 700px;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-#BannerText div {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;  
-}
-#BannerText h2 {
-  font-size: 5vw;
-  font-weight: 700;
-  color: #F1CF27;
-}
-@media screen and (min-width: 1280px) {
-
-  #BannerText h2 {
-    font-size: 50pt;
-  }
-}
-
-#Front-End {
-  left: 20px;
-  top: 50px;
-  font-family: Ubuntu;
-}
-
-#UI-UX {
-  left: 400px;
-  top: 50px;
-  font-family: Ubuntu;
-}
-
-#BigSlash {
-  margin-left: 20px;
-  transform:rotate(15deg);
-  height: 180px;
-  width: 20px;
-  background-color: #F17F27;
-}
-#BannerText p {
-  position: relative;
-  font-size: 20pt;
-  font-weight: 500;
-  width: 80%;
-  color: #f14f27;
-}
-
-
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 500px) {
   header h1 {
     font-size: 20pt;
   }
-  .Banner {
-    flex-direction: column-reverse;
-    background-color: antiquewhite;
+  .dropdown {
+    margin-right: 20px;
+  }
+  #menuText {
+    font-size: 20pt;
+    right: 30px;
+  }
+
+}
+
+
+
+
+#Home {
+  font-family: Jura;
+}
+
+#BannerImg {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 200px;
+  z-index: -1;
+}
+
+#ImgCont {
+  z-index: -1;
+  position: absolute;
+  top: 200px;
+  width: 100%; 
+  height: 1000px; 
+  background-image: url('assets/img/BlackHole.png');
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  animation: rippleEffect 4s infinite;
+
+
+}
+@keyframes rippleEffect {
+  0% {
+    background-size: 100%;
+  }
+  50% {
+    background-size: 105%; /* Expand slightly to simulate ripple */
+  }
+  100% {
+    background-size: 100%;
+  }
+}
+#StarCont {
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('assets/img/Stars.svg');
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: repeat; 
+}
+#BannerHead {
+  font-size: 50pt;
+  color: #000000;
+  text-align: center;
+  margin-top: 150px;
+  width: 80%;
+  margin: 150px auto;
+  background: linear-gradient(to right, rgb(47, 0, 255), rgb(0, 170, 255), rgb(255, 0, 234), rgb(255, 0, 0));
+  /* background: linear-gradient(to top, rgb(255, 0, 217), rgb(179, 0, 255), rgb(88, 0, 106)); */
+
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+
+
+
+#BannerSub {
+  font-size: 30pt;
+  color: #ffffff;
+  text-align: center;
+  margin-top: -100px;
+}
+#BannerSub::after {
+  content: '';
+  display: block;
+  margin: 0 auto;
+  width: 400px;
+  height: 3px;
+  background: #ffffff;
+  margin-top: 20px;
+}
+.Break {
+  display: none;
+}
+
+
+
+@media screen and (max-width: 1300px) {
+  #ImgCont {
+    top: 250px;
+    height: 800px;
+    animation: none;
+  }
+  #BannerSub {
+    margin: -100px auto;
 
   }
 }
 
+@media screen and (max-width: 905px) {
+  #BannerHead {
+    font-size: 40pt;
+    width: 80%;
+    margin: 150px auto;
+
+  }
+  #BannerSub {
+    font-size: 25pt;
+    width: 90%;
+    margin: -100px auto;
+  }
+
+  #ImgCont {
+    top: 300px;
+    height: 700px;
+  }
+  
+
+  @media screen and (max-width: 600px) {
+    #ImgCont {
+      top: 400px;
+      height: 600px;
+    }
+    #BannerHead {
+      font-size: 30pt;
+      width: 80%;
+      margin: 100px auto;
+    }
+    #BannerSub {
+      font-size: 20pt;
+      width: 80%;
+      margin: -50px auto;
+  }
+  .dropdown-item {
+    background-color: #000000;
+  }
+  .dropdown-menu {
+    background-color: #000000;
+  }
+}
+
+  @media screen and (max-width: 500px) {
+    #ImgCont {
+      top: 400px;
+      height: 400px;
+    }
+    #BannerHead {
+      font-size: 30pt;
+      width: 80%;
+      margin: 100px auto;
+  
+    }
+    #BannerSub {
+      font-size: 20pt;
+      width: 80%;
+      margin: 50px auto;
+    }
+  }
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 500px) {
+  #BannerImg {
+    top: 400px;
+    object-fit: cover;
+    object-position: center;
+  }
+  .Break {
+    display:contents;
+  }
+  #BannerHead {
+    font-size: 30pt;
+    width: 80%;
+    margin: 100px auto;
+
+  }
+  #BannerSub {
+    font-size: 20pt;
+    width: 80%;
+    margin: -50px auto;
+  }
+  
+
+}
+
+
+/* Home STyling */
+
+.InfoCont {
+  position: absolute;
+  left: 10%;
+  top: 1200px;
+  width: 80%;
+  height:650px;
+  border-radius: 40px;
+  border: #474747 2px solid;
+  background: #ACACAC;
+  background: radial-gradient(at left top, #646464, #010101);
+
+  display:flex;
+  opacity: 0.5;
+  transform: scale(0.5);
+  transition: opacity 2s ease, transform 2s ease; /* Smooth transition */
+}
+
+
+
+/* Fade in */
+.fade-in {
+  opacity: 1;
+  transform: scale(1);
+  background-color: #83dee8;
+}
+
+/* Fade out */
+.fade-out {
+  opacity: 0;
+  transform: scale(0.5);
+}
+
+.InfoCont:hover {
+  transition: transform 0.2s ease; /* Ensure smooth tilting */
+}
+
+.InfoCont img {
+  border-radius: 40px 0px 0px 40px;
+}
+
+.InfoText {
+  padding: 20px;
+  color: #ffffff;
+  font-family: Jura;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.InfoText h2 {
+  font-size: 30pt;
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.InfoText p {
+  font-size: 20pt;
+  margin: 0;
+  width: 90%;
+  text-align: center;
+}
 
