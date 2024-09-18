@@ -53,6 +53,8 @@ const Home = () => {
             if (currentInfoRef2) observer.unobserve(currentInfoRef2);
             if (currentWrapperRef1) observer.unobserve(currentWrapperRef1);
             if (currentWrapperRef2) observer.unobserve(currentWrapperRef2);
+
+
         };
     }, []);
 
@@ -75,28 +77,32 @@ const Home = () => {
                         In my spare time I strive to enhance my abilities by learning new technologies and features that can improve my design. I'm eager to apply my abilities to more real-world projects.</p>
                     </div>
                 </div>
-            </div>
 
-            {/* <div className="InfoContWrapper" ref={wrapperRef1}>
-                <div className="InfoCont" ref={infoRef1}>
-                    <img src="img/HeadShot.png" alt="Profile" />
-                    <div className="InfoText">
-                        <h2>Hi! I’m Mitchel,<br /> A new-grad Front end Developer.</h2>
-                        <p>I’m passionate about building clean, functional, and visually appealing websites. Recently graduated, I’ve been diving deep into front-end technologies like HTML, CSS, JavaScript, and React. I’m constantly learning new techniques and best practices to create seamless, responsive user experiences. <br /><br />
-                        In my spare time I strive to enhance my abilities by learning new technologies and features that can improve my design. I'm eager to apply my abilities to more real-world projects.</p>
+            <div id="TechCont">
+                <h2>Technologies</h2>
+
+                <div className="TechScroll">
+                    <div id="TechScrollInner">
+                        <div className="TechItem"><img src="img/HtmlIcon.svg" alt="HTML5" /><p>HTML</p></div>
+                        <div className="TechItem"><img src="img/CSSIcon.svg" alt="CSS3" /><p>CSS</p></div>
+                        <div className="TechItem"><img src="img/JavaScriptIcon.svg" alt="JavaScript" /><p>JavaScript</p></div>
+                        <div className="TechItem"><img src="img/ReactIcon.svg" alt="React" /><p>React</p></div>
+                        <div className="TechItem"><img src="img/FigmaIcon.svg" alt="Figma" /><p>Figma</p></div>
+                        <div className="TechItem"><img src="img/FirebaseIcon.svg" alt="Firebase" /><p>Firebase</p></div>
+                    </div>
+                    <div id="TechScrollInner">
+                        <div className="TechItem"><img src="img/HtmlIcon.svg" alt="HTML5" /><p>HTML</p></div>
+                        <div className="TechItem"><img src="img/CSSIcon.svg" alt="CSS3" /><p>CSS</p></div>
+                        <div className="TechItem"><img src="img/JavaScriptIcon.svg" alt="JavaScript" /><p>JavaScript</p></div>
+                        <div className="TechItem"><img src="img/ReactIcon.svg" alt="React" /><p>React</p></div>
+                        <div className="TechItem"><img src="img/FigmaIcon.svg" alt="Figma" /><p>Figma</p></div>
+                        <div className="TechItem"><img src="img/FirebaseIcon.svg" alt="Firebase" /><p>Firebase</p></div>
                     </div>
                 </div>
             </div>
+            </div>
 
-            <div className="InfoContWrapper2"ref={wrapperRef2}>
-                <div className="InfoCont"  id='Technologies'ref={infoRef2}>
-                    <h2>
-                        Technologies
-                    </h2>
 
-                </div>
-               
-            </div> */}
         </div> 
     );
 }

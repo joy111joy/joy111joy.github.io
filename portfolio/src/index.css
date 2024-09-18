@@ -290,16 +290,21 @@ header h1 {
     animation: none;
   }
   #BannerSub {
-    margin: -100px auto;
+    font-size: 25pt;
 
   }
+  #BannerHead {
+    font-size: 45pt;
+    width: 97%;
+  }
+
 }
 
 @media screen and (max-width: 905px) {
   #BannerHead {
     font-size: 40pt;
     width: 80%;
-    margin: 150px auto;
+    margin: 120px auto;
 
   }
   #BannerSub {
@@ -401,11 +406,11 @@ header h1 {
   position: relative; 
   display: flex;
   justify-content: space-evenly;
-  
   transform: scale(0.8);
   opacity: 0;
   transition: opacity 2s ease, transform 2s ease; 
   z-index: 2;
+  padding-top: 100px;
 }
 
 /* Fade in */
@@ -467,14 +472,7 @@ width: 30%;
 
 
 
-#Technologies {
-  text-align: center;
-  color: white;
-  display: flex;
-  justify-content: center;
-  font-size: 20pt;
 
-}
 
 #HomeCont {
   width: 100%;
@@ -484,6 +482,9 @@ width: 30%;
   position: relative;
   top: 700px;
   border-top: 2px solid #ACACAC;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 
@@ -491,6 +492,7 @@ width: 30%;
   .InfoCont {
     flex-direction: column;
     align-items: center;
+    top: 0;
   }
   .InfoText {
     width: 100%;
@@ -504,9 +506,95 @@ width: 30%;
     position: relative;
     top: -100px;
     object-fit: cover;
-    object-position: 30px 50px;
+    object-position: -20px 80px;
     clip-path: circle(30% at 50% 50%);
-    height: 800px;
-    width: 500px;
+    height: 600px;
+    width: 300px;
   }
 }
+
+@media screen and (max-width: 550px) {
+  .InfoCont img {
+    position: relative;
+    top: -100px;
+    object-fit: cover;
+    object-position: -10px 50px;
+    clip-path: circle(30% at 50% 50%);
+    height: 400px;
+    width: 200px;
+  }
+  .InfoText {
+    top: -200px;
+  }
+  .InfoText h2 {
+    font-size: 30pt;
+    width: 90%;
+  }
+  .InfoText p {
+    font-size: 15pt;
+  }
+  .InfoCont {
+    margin-top: 100px;
+  }
+}
+
+
+
+
+#TechCont {
+  position: relative;
+  width: 100%;
+  padding-top: 100px;
+  color: White;
+}
+#TechCont h2 {
+  font-size: 50pt;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 50px;
+}
+.TechScroll {
+  height: 400px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  gap: 50px;
+}
+#TechScrollInner {
+  display: flex;
+  gap: 50px;
+  animation: scroll 20s linear infinite; /* Adjust speed with time value */
+}
+@keyframes scroll {
+  0% {
+    transform: translateX(0); /* Start at normal position */
+  }
+  100% {
+    transform: translateX(-103%); /* Move by half the width of the items */
+  }
+}
+.TechItem {
+  position: relative;
+  height: 400px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+}
+.TechItem p {
+  font-size: 20pt;
+  text-align: center;
+  margin: 0;
+  margin-top: 20px;
+
+}
+/* Duplicate content for seamless scrolling */
+
+.TechItem img {
+  height: 70%;
+  z-index: 1;
+
+}
+
+
