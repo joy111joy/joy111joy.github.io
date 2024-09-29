@@ -1,0 +1,13 @@
+<svg width="1440" height="1609" viewBox="0 0 1440 1609" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Small Stars -->
+  <path d="M444.472 286.524C444.29 287.975 443.961 287.567 442.897 288.099" stroke="white" stroke-linecap="round"/>
+  <path d="M214.65 521.068V519.494" stroke="white" stroke-linecap="round"/>
+  <path d="M1280.33 541.532V539.958" stroke="white" stroke-linecap="round"/>
+  <!-- Add other small stars here -->
+
+  <!-- Bigger Stars -->
+  <path d="M888.944 573.048C888.58 575.95 887.922 575.134 885.794 576.198" stroke="white" stroke-linecap="round"/> <!-- Scaled from 444.472 -->
+  <path d="M429.3 1042.136V1038.988" stroke="white" stroke-linecap="round"/> <!-- Scaled from 214.65 -->
+  <path d="M2560.66 1083.064V1079.916" stroke="white" stroke-linecap="round"/> <!-- Scaled from 1280.33 -->
+  <!-- Add more larger stars as needed -->
+</svg>
