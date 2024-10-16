@@ -1,0 +1,23 @@
+[
+    {
+      "id": "pro-fireworks-nl",
+      "name": "Pro Fireworks NL",
+      "description": "As my first freelancing project, I collaborated with a newly launched fireworks business to design and develop their online presence. The client required a visually appealing, user-friendly static website that would serve as a gateway to their SquareSpace store, streamlining their e-commerce operations.\n\nIn addition to handling the full front-end design and implementation, I was responsible for the creation of the business's logo, ensuring the branding aligned with their vision. I worked closely with the business owner to configure and integrate their SquareSpace store, optimizing the online shopping experience for customers.\n\nThis project was completed using HTML and CSS, with hosting managed through GoDaddy. Despite using basic tools, I successfully delivered a professional, functional site that fulfilled the client's requirements, laying the foundation for future improvements and scalability. This project helped me refine my front-end development skills, brand design, and gain valuable experience in client collaboration, design iteration, and e-commerce integration."
+    },
+    {
+      "id": "spin-top-records",
+      "name": "SpinTop Records",
+      "description": "As the capstone project for my full-stack development semester, I collaborated with two fellow students to create a dynamic online music store, Spin-Top Records. My primary responsibility was handling the front-end development using Node.js, integrating MongoDB and PostgreSQL to implement a robust search system. This search functionality allowed users to seamlessly explore a catalog of both physical and digital music albums.\n\nIn addition to the search system, we also developed secure login and registration features, ensuring smooth user authentication and data protection. Our team worked in parallel, each focusing on different aspects of the project, fostering strong teamwork and clear communication throughout the process. This project further honed my skills in front-end technologies, database management, and cross-team collaboration in a full-stack environment."
+    },
+    {
+      "id": "rising-tide",
+      "name": "Rising Tide Convenience",
+      "description": "For this project, I developed a website for a local convenience store specializing in homemade ice cream treats. The site was designed to showcase the store’s offerings, including detailed product listings and important business information. One of the key requirements was to provide an online menu that would allow customers to explore the store's unique homemade products.\n\nAdditionally, I implemented a secure portal using React.js and Google Firebase, allowing the store's manager and employees to easily update the product listings as new items were added or changes occurred. This feature streamlined product management and enabled real-time updates without the need for developer intervention. The project strengthened my expertise in front-end development, user authentication, and database integration while providing the store owner with an efficient, easy-to-use solution for managing their business online."
+    },
+    {
+      "id": "joy-projects",
+      "name": "Joy Projects",
+      "description": "This project is a full-stack portfolio piece that showcases my expertise in web design and development, leveraging technologies like React.js, npm, Firebase, JavaScript, and HTML/CSS. The application serves as a project manager, allowing users to efficiently add, edit, and delete projects from a dynamic list, streamlining project organization.\n\nData persistence is achieved through Firebase's Firestore, ensuring that all project details are securely stored and easily accessible. Additionally, users can expand individual projects to view further details such as the project type and description, making it a versatile tool for tracking progress and milestones. This project highlights my capabilities in front-end development, user interface design, and database management in a full-stack environment."
+    }
+  ]
+  

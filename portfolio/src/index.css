@@ -230,20 +230,9 @@ header h1 {
   background-size: cover; 
   background-position: center 600px; /* Center the background image */
   background-repeat: no-repeat; 
-  animation: rippleEffect 7s infinite;
+  background-size: 100%;
 }
 
-@keyframes rippleEffect {
-  0% {
-      background-size: 100%;
-  }
-  50% {
-      background-size: 105%; /* Expand slightly to simulate ripple */
-  }
-  100% {
-      background-size: 100%;
-  }
-}
 
 #StarCont {
   position: absolute; /* Ensures it is placed relative to the body or a container */
@@ -499,14 +488,14 @@ width: 30%;
 #HomeCont {
   width: 100%;
   background: #000000;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #280325, #000000);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #280325, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: -webkit-linear-gradient(to top, #280325, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #280325, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   position: relative;
-  margin-top: 400px;
-  border-top: 2px solid #ACACAC;
+  margin-top: 90vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  
 }
 
 
@@ -662,7 +651,7 @@ width: 30%;
 #stars, #stars2, #stars3 {
   position: absolute;
   top: 0;
-  left: 0;
+  left: -50px;
   width: 100%; /* Allow for scrolling effect */
   height: 200%;
   background-repeat: repeat; /* Repeat background */
@@ -751,10 +740,44 @@ width: 30%;
 
 @keyframes autoRun {
   from {
-    transform: perspective(1000px) rotateX(-12deg) rotateY(0deg); /* Corrected */
+    transform: perspective(1000px) rotateX(-12deg) rotateY(0deg); 
   }
   to {
-    transform: perspective(1000px) rotateX(-12deg) rotateY(360deg); /* Corrected */
+    transform: perspective(1000px) rotateX(-12deg) rotateY(360deg); 
+  }
+}
+
+@media screen and (max-width: 1100px) {
+
+  .ProjCont .slider .item {
+    transform: 
+      rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg))
+      translateZ(40vw); /* Increase this value */
+  }
+  @keyframes autoRun {
+    from {
+      transform: perspective(1000px) rotateX(-15deg) rotateY(0deg); 
+    }
+    to {
+      transform: perspective(1000px) rotateX(-15deg) rotateY(360deg); 
+    }
+  }
+  .ProjCont .slider {
+    width: 300px; /* Increase width */
+    left: calc(50% - 150px); /* Centering */
+
+  }  
+}
+@media screen and (max-width:720px) {
+  .ProjCont .slider .item {
+    transform: 
+      rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg))
+      translateZ(270px); /* Increase this value */
+  }
+  .ProjCont .slider {
+    width: 250px;
+    left: calc(50% - 125px); /* Centering */
+
   }
 }
 
@@ -811,10 +834,88 @@ width: 30%;
 
 
 footer {
-  padding-top: 50px;
   width: 100%;
   height: 200px;
-  background-color: #000000;
+  background-color: #280325;
   position: relative;
   border: 2px 0px 0px 0px solid #ACACAC; 
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 50px;
+  overflow: hidden;
 }
+
+
+.footerLinks {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+  height: 100%;
+  padding-right: 50px;
+}
+
+.footerLinks a {
+  color: white;
+  text-decoration: none;
+  font-size: 28pt;
+  font-family: Jura;
+  /* transform: translateX(100vw); */
+  animation: FootLinksAnim 5s linear ease-in;
+
+}
+
+.FootTitle {
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+}
+.FootTitle a {
+  font-family: Jura;
+  padding-left: 50px;
+  color: white;
+  text-decoration: none;
+  font-size: 40pt;
+  text-align: left;
+  background: linear-gradient(to right, rgb(47, 0, 255), rgb(0, 170, 255), rgb(255, 0, 234), rgb(255, 0, 0));
+  /* background: linear-gradient(to top, rgb(255, 0, 217), rgb(179, 0, 255), rgb(88, 0, 106)); */
+
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+@media screen and (max-width: 750px) {
+    .FootTitle a {
+      font-size: 30pt;
+      padding-right: 30px;
+      padding-left: 20px;
+    }
+    .footerLinks a {
+      font-size: 20pt;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

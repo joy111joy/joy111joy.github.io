@@ -1,0 +1,175 @@
+
+#ImgCont {
+    top: 0px;
+    position: absolute; /* To position child elements absolutely */
+    height: 1200px; /* Full viewport height */
+    overflow: hidden; /* Hide overflow to keep stars contained */
+    z-index: -1;
+  }
+  
+  /* Parallax layers for stars */
+  #stars, #stars2, #stars3 {
+    position: absolute;
+    top: 0;
+    left: -50px;
+    width: 100%; /* Allow for scrolling effect */
+    height: 200%;
+    background-repeat: repeat; /* Repeat background */
+    background-size: contain; /* Ensure background image is contained */
+    z-index: -1; /* Ensure stars are behind content */
+  }
+  
+  /* Background layers for stars with different images and speeds */
+  #stars {
+    margin-left: 100px;
+    background-image: url('assets/img/Stars.svg'); /* Replace with your star image path */
+    animation: moveStars 250s linear infinite; /* Slower movement for distant stars */
+  }
+  
+  #stars2 {
+    margin-left: 50px;
+    margin-top: -100px;
+    background-image: url('assets/img/Stars.svg'); /* Replace with your star image path */
+    animation: moveStars 230s linear infinite; /* Medium speed for medium stars */
+  }
+  
+  #stars3 {
+    margin-right: 500px;
+    margin-top: -300px;
+    background-image: url('assets/img/Stars.svg'); /* Replace with your star image path */
+    animation: moveStars 180s linear infinite; /* Faster movement for closer stars */
+  }
+  
+  /* Star parallax movement animations */
+  
+  
+  @keyframes moveStars {
+    0% {
+        transform: translateY(0); /* Start at the initial position */
+    }
+    50% {
+        transform: translateY(-100%); /* Move up by 100% of the container's height */
+    }
+    100% {
+        transform: translateY(0); /* Reset to the initial position */
+    }
+  }
+
+  
+/* Projects Styling */
+
+.Project h2{
+    font-size: 80pt;
+    font-family: Jura;
+    background: linear-gradient(to right, rgb(47, 0, 255), rgb(0, 170, 255), rgb(255, 0, 234), rgb(255, 0, 0));
+    /* background: linear-gradient(to top, rgb(255, 0, 217), rgb(179, 0, 255), rgb(88, 0, 106)); */
+  
+    -webkit-background-clip: text;
+    color: transparent;
+  
+  }
+
+
+.ProjectList {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: space-around;    
+    padding-bottom: 200px;
+}
+.ProjectItem {
+    width: 500px;
+    height: 350px;
+    padding-bottom: 0px;
+    background-color: royalblue;
+    margin-top: 100px;
+    display: flex;
+    align-items: flex-end;
+    background-size: cover;
+    background-position: 30% 0%;
+    background-size: 100% 85%;
+    background-repeat: no-repeat;
+    font-size: 30pt;
+    font-family: Jura;
+    transition: transform 0.3s ease-in;
+}
+a {
+    color: black;
+    text-decoration: none;
+}
+
+.ProjectItem:hover {
+    transform: scale(1.1);
+}
+
+#ProFireworks  {
+    background-image: url('assets/img/ProFireworksPreview.png');
+}
+#SpinTop {
+    background-image: url('assets/img/SpinTopPreview.png');
+}
+#RisingTide {
+    background-image: url('assets/img/RisingTidePreview.png');
+}
+#JoyProjects {
+    background-image: url('assets/img/JoyProjectsPreview.png');
+}
+.ProjTitle {
+    position: relative;
+    width: 100%;
+    height: 15%;
+    background-color: rgb(232, 232, 231);
+    bottom: 0%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.ProjectsDetails {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.ProjectName {
+    background: linear-gradient(to right, rgb(47, 0, 255), rgb(0, 170, 255), rgb(255, 0, 234), rgb(255, 0, 0));
+    /* background: linear-gradient(to top, rgb(255, 0, 217), rgb(179, 0, 255), rgb(88, 0, 106)); */
+  
+    -webkit-background-clip: text;
+    color: transparent;    font-size: 35pt;
+    font-family: Jura;
+    font-weight: 700;
+    
+
+}
+.ProjectDesc {
+    color: white;
+    width: 80%;
+    font-size: 20pt;
+    font-family: Jura;
+    font-weight: 500;
+}
+
+@media screen and (max-width: 750px) {
+    .ProjectItem {
+        width: 400px;
+        height: 310px;
+    }
+    .Project h2 {
+        font-size: 15vw;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .ProjectItem {
+        width: 300px;
+        height: 200px;
+    }
+    .ProjTitle {
+        font-size: 20pt;
+    }
+}

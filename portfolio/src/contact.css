@@ -1,0 +1,22 @@
+.Contact {
+    color: white;
+    font-family: Jura;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.Contact h2 {
+    font-size: 70pt;
+    background: linear-gradient(to right, rgb(47, 0, 255), rgb(0, 170, 255), rgb(255, 0, 234), rgb(255, 0, 0));
+    /* background: linear-gradient(to top, rgb(255, 0, 217), rgb(179, 0, 255), rgb(88, 0, 106)); */
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+
+.Contact p {
+    color: white;
+    width: 80%;
+    font-size: 20pt;
+    font-family: Jura;
+    font-weight: 500;
+}

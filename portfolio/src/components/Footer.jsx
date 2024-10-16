@@ -1,8 +1,16 @@
+import { Link } from "react-router-dom"
+
 function Footer () {
   return (
     <footer>
-      <p>Test</p>
-      <div className="footerLinks"></div>
+      <div className="FootTitle">
+        <Link>Mitchel Joy</Link>
+      </div>
+      <div className="footerLinks">
+        <Link>Home</Link>
+        <Link id="Alt">Projects</Link>
+        <Link>Contact</Link>
+      </div>
     </footer>
   )
 }
