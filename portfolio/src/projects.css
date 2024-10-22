@@ -141,11 +141,16 @@ a {
     /* background: linear-gradient(to top, rgb(255, 0, 217), rgb(179, 0, 255), rgb(88, 0, 106)); */
   
     -webkit-background-clip: text;
-    color: transparent;    font-size: 55pt;
+    color: transparent;    
+    font-size: 10vw;
     font-family: Jura;
     font-weight: 700;
-    
 
+}
+@media screen and (min-width: 950px) {
+    .ProjectName {
+        font-size: 55pt;
+    }
 }
 .ProjectDesc {
     color: white;

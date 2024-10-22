@@ -54,8 +54,16 @@ const Home = () => {
 
             </div>
             <h2 id="BannerHead">Front-End & UI/UX <span className="Break"><br /></span>Developer</h2>
-            <h3 id="BannerSub">Web Design Out of this world.</h3>
 
+            <h3 id="BannerSub">Web Design Out of this world.</h3>
+            <div className="SocialsBox">
+                <Link to="https://www.linkedin.com/in/mitchel-joy-939328295/"><img src="img/LinkedInIcon.svg" alt="" /></Link>
+
+                <Link to="https://github.com/joy111joy"><img src="img/GitHubIcon.svg" alt="" /></Link>
+
+                <Link to="/contact"><img src="img/MailIcon.svg" alt="" id="Mail"/></Link>
+
+            </div>
             <div id="HomeCont">
                 <div className="InfoCont" ref={infoRef1}>
                     <img src="img/HeadShot2.jpeg" alt="Profile" />
@@ -95,34 +103,34 @@ const Home = () => {
 
                         <div className="slider" style={{ "--quantity": 6 }}>
                             <div className="item" style={{ "--position": 1 }}>
-                                <Link>
-                                <img src="img/SpinTopPreview.png" alt="Project 1" />
+                                <Link to='/projects/spin-top-records'>
+                                    <img src="img/SpinTopPreview.png" alt="Project 1" />
                                 </Link>
                             </div>
                             <div className="item" style={{ "--position": 2 }}>
-                                <Link>
-                            <img src="img/ProFireworksPreview.png" alt="Project 2" />
-                            </Link>   
+                                <Link to="/projects/pro-fireworks-nl">
+                                    <img src="img/ProFireworksPreview.png" alt="Project 2" />
+                                </Link>   
                             </div>
                             <div className="item" style={{ "--position": 3 }}>
                                 <Link>
-                            <img src="img/SmartSolePreview.png" alt="Project 3" />
-                            </Link>
+                                    <img src="img/SmartSolePreview.png" alt="Project 3" />
+                                </Link>
                             </div>
                             <div className="item" style={{ "--position": 4 }}>
-                                <Link>
-                            <img src="img/SpinTopAboutPreview.png" alt="Project 4" />
-                            </Link>
+                                <Link to="to='/projects/spin-top-records'">
+                                    <img src="img/SpinTopAboutPreview.png" alt="Project 4" />
+                                </Link>
                             </div>
                             <div className="item" style={{ "--position": 5 }}>
-                                <Link>
-                            <img src="img/RisingTidePreview.png" alt="Project 5" />
-                            </Link>
+                                <Link to="/projects/rising-tide">
+                                    <img src="img/RisingTidePreview.png" alt="Project 5" />
+                                </Link>
                             </div>
                             <div className="item" style={{ "--position": 6 }}>
-                                <Link>
-                            <img src="img/JoyProjectsPreview.png" alt="Project 5" />
-                            </Link>
+                                <Link to="/projects/joy-projects">
+                                    <img src="img/JoyProjectsPreview.png" alt="Project 5" />
+                                </Link>
                             </div>
                         </div>
 

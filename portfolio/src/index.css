@@ -27,176 +27,6 @@ code {
 
 /* Header Styling */
 
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 100px;
-  font-family: Jura;
-  font-weight: 700;
-  color: #ffffff
-}
-header h1 {
-  padding: 10px;
-  margin: 0;
-  margin-left: 20px;
-  font-size: 30pt;
-}
-
-.dropdown {
-  position: relative; /* Ensure parent element is positioned relative for absolute children */
-  margin-right: 50px;
-  border-radius: 50px;
-  font-size: 10pt;
-  height: 50px;
-  width: 50px;
-  cursor: pointer;
-  
-}
-
-/* Pseudo-element for styling, such as an arrow */
-.dropdown::after {
-  content: ''; /* Required for pseudo-elements */
-  position: absolute;
-  top: 0px; 
-  right: 00px; 
-  height: 100%; 
-  width: 0; 
- 
-  border-style: solid;
-  transition: all 1s;
-  background-color: #9327f1;
-  border-color: #9327f1;
-}
-
-.dropdown.show::after {
-  content: ''; /* Required for ::after to work */
-  position: absolute;
-  height: 400%;
-  top: 0;
-  transition: all 1s;
-}
-
-.dropdown-menu {
-  list-style: none;
-  font-size: large;
-  position: absolute;
-  display: none;
-  flex-direction: column;
-  text-align: right;
-  right: 15px;
-  top: 40px;
-  gap: 20px;
-  font-size: 20pt;
-}
-.dropdown.show .dropdown-menu {
-  display: flex;
-
-}
-.dropdown-menu a {
-  text-decoration: none;
-  color: #ffffff;
-  transition: all 0.5s;
-  
-}
-#menuText {
-  position: absolute;
-  right: 55px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  height: 100%;
-  width: 100%;
-  font-size: 25pt;
-
-}
-@keyframes underlineAnimation1 {
-  from {
-    width: 0;
-  }
-  to {
-    width: 90%;
-  }
-}
-
-@keyframes underlineAnimation2 {
-  from {
-    width: 0;
-  }
-  to {
-    width: 115%;
-  }
-}
-
-@keyframes underlineAnimation3 {
-  from {
-    width: 0;
-  }
-  to {
-    width: 110%;
-  }
-}
-
-.dropdown-item {
-  position: relative; /* Required for ::after positioning */
-  opacity: 0;
-}
-
-
-.dropdown-item::after {
-  content: ''; /* Required for pseudo-elements */
-  position: absolute;
-  height: 5px;
-  width: 0; /* Start hidden */
-  bottom: 0; /* Position at the bottom */
-  right: -15px; /* Align with the right edge */
-  top: 30px;
-  transform-origin: right; /* Scale from the right edge */
-  animation: none; /* Initially no animation */
-}
-
-
-.dropdown.show .dropdown-item {
-  opacity: 1;
-  animation: fadeIn 0.5s ease forwards; /* Apply animation */
-}
-
-#Link1::after {
-  animation: underlineAnimation1 0.5s ease forwards; /* Apply animation */
-  animation-delay: 0.3s;
-  background-color: #9327f1;
-
-}
-#Link2::after {
-  animation: underlineAnimation2 0.5s ease forwards; /* Apply animation */
-  animation-delay: 0.6s;
-  background-color: #9327f1;
-
-}
-#Link3::after {
-  animation: underlineAnimation3 0.5s ease forwards; /* Apply animation */
-  animation-delay: 0.9s;
-  background-color: #9327f1;
-
-}
-
-
-@media screen and (max-width: 500px) {
-  header h1 {
-    font-size: 20pt;
-  }
-  .dropdown {
-    margin-right: 20px;
-  }
-  #menuText {
-    font-size: 20pt;
-    right: 30px;
-  }
-
-}
-
-
-
 
 #Home {
   font-family: Jura;
@@ -251,7 +81,7 @@ header h1 {
   text-align: center;
   margin-top: 150px;
   width: 80%;
-  margin: 150px auto;
+  margin: 130px auto;
   background: linear-gradient(to right, rgb(47, 0, 255), rgb(0, 170, 255), rgb(255, 0, 234), rgb(255, 0, 0));
   /* background: linear-gradient(to top, rgb(255, 0, 217), rgb(179, 0, 255), rgb(88, 0, 106)); */
 
@@ -260,13 +90,28 @@ header h1 {
 }
 
 
-
+.SocialsBox {
+  height: 50px;
+  width: 80%;
+  margin: -20px auto;
+  display: flex;
+  justify-content: center;
+  gap: 10vw;
+  padding-top: 10px
+}
+.SocialsBox img {
+  height: 60px;
+}
+#Mail {
+  height: 50px;
+  margin-top: 4px;
+}
 
 #BannerSub {
   font-size: 30pt;
   color: #ffffff;
   text-align: center;
-  margin-top: -100px;
+  margin-top: -120px;
 }
 #BannerSub::after {
   content: '';
@@ -300,23 +145,35 @@ header h1 {
 
 }
 
-@media screen and (max-width: 905px) {
+@media screen and (max-width: 925px) {
   #BannerHead {
     font-size: 40pt;
     width: 80%;
-    margin: 120px auto;
+    margin: 80px auto;
 
   }
   #BannerSub {
     font-size: 25pt;
     width: 90%;
-    margin: -100px auto;
+    margin: -60px auto;
   }
-
+  .SocialsBox {
+    margin: 70px auto;
+  }
   #ImgCont {
     top: 300px;
     height: 700px;
   }
+  #BannerSub::after {
+  display: none;  
+}
+.SocialsBox img {
+  height: 50px;
+}
+#Mail {
+  height: 40px;
+}
+}
   
 
   @media screen and (max-width: 600px) {
@@ -332,11 +189,13 @@ header h1 {
     #BannerSub {
       font-size: 20pt;
       width: 80%;
-      margin: -50px auto;
+      margin: -90px auto;
   }
-  #BannerSub::after {
-    width: 70%;
+  .SocialsBox {
+    margin: 120px auto;
   }
+  
+
   .dropdown-item {
     background-color: #000000;
   }
@@ -350,52 +209,29 @@ header h1 {
       top: 400px;
       height: 400px;
     }
-    #BannerHead {
-      font-size: 30pt;
-      width: 80%;
-      margin: 100px auto;
-  
-    }
-    #BannerSub {
-      font-size: 20pt;
-      width: 80%;
+
+    .SocialsBox {
       margin: 50px auto;
     }
-  }
 
-
-
-
-}
-
-
-
-
-
-
-
-
-
-
-@media screen and (max-width: 500px) {
-  #BannerImg {
+    #BannerImg {
     top: 400px;
     object-fit: cover;
     object-position: center;
-  }
-  .Break {
+   }
+    .Break {
     display:contents;
-  }
-  #BannerHead {
+    }
+    #BannerHead {
     font-size: 30pt;
     width: 80%;
-    margin: 100px auto;
+    margin: 50px auto;
 
-  }
-  #BannerSub {
+    }
+    #BannerSub {
     font-size: 20pt;
     width: 80%;
-    margin: -50px auto;
+    margin: -30px auto;
   }
   
 
