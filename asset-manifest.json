@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.e16a9938.css",
+    "main.css": "/static/css/main.15ac9821.css",
     "main.js": "/static/js/main.c8fb9186.js",
     "static/js/453.1407b060.chunk.js": "/static/js/453.1407b060.chunk.js",
     "static/media/PFNL_Phone_4.png": "/static/media/PFNL_Phone_4.03ad946422385a75c060.png",
@@ -10,12 +10,12 @@
     "static/media/SpinTopPreview.png": "/static/media/SpinTopPreview.da31636946601eafdcfe.png",
     "static/media/Stars.svg": "/static/media/Stars.542db9715e030014c884.svg",
     "index.html": "/index.html",
-    "main.e16a9938.css.map": "/static/css/main.e16a9938.css.map",
+    "main.15ac9821.css.map": "/static/css/main.15ac9821.css.map",
     "main.c8fb9186.js.map": "/static/js/main.c8fb9186.js.map",
     "453.1407b060.chunk.js.map": "/static/js/453.1407b060.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e16a9938.css",
+    "static/css/main.15ac9821.css",
     "static/js/main.c8fb9186.js"
   ]
 }
