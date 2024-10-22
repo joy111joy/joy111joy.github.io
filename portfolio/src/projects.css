@@ -199,12 +199,21 @@ a {
     padding-bottom: 10px;
     justify-content: center;
 }
+.ImgOne {
+    width: 55%;
+}
+.ImgTwo {
+    width: 45%;
+}
 @media screen and (max-width:800px) {
     .ProjImgBox {
         flex-direction: column;
         width: 70%;
         padding-top: 25vw;
         padding-bottom: 20vw;
+    }
+    .ImgOne {
+        width: auto;
     }
     .ImgTwo {
         display: none;
