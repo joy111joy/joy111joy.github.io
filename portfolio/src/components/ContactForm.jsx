@@ -18,9 +18,10 @@ const ContactForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
   
-    const serviceID = 'service_wrlowki';
-    const templateID = 'template_3m1zre6';
-    const publicKey = 'I_66qJ319YRO00ieN';
+    const serviceID = process.env.REACT_APP_EMAILJS_SERVICE_ID;
+    const templateID = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
+    const publicKey = process.env.REACT_APP_EMAILJS_USER_ID;
+    
   
     // Define template parameters
     const templateParams = {
@@ -74,7 +75,7 @@ const ContactForm = () => {
         <button type='submit'>Send Message</button>
       </form>
 
-      {formStatus && <p>{formStatus}</p>} {/* Display status message */}
+      {formStatus && <p id='Conf  '>{formStatus}</p>} {/* Display status message */}
     </div>
   );
 };
