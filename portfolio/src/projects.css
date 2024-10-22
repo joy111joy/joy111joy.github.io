@@ -105,7 +105,7 @@ a {
 }
 
 #ProFireworks  {
-    background-image: url('assets/img/ProFireworksPreview.png');
+    background-image: url('assets/img/PFNL_Phone_4.png');
 }
 #SpinTop {
     background-image: url('assets/img/SpinTopPreview.png');
@@ -114,7 +114,7 @@ a {
     background-image: url('assets/img/RisingTidePreview.png');
 }
 #JoyProjects {
-    background-image: url('assets/img/JoyProjectsPreview.png');
+    background-image: url('assets/img/JoyProjects_Phone_2.png');
 }
 .ProjTitle {
     position: relative;
@@ -133,6 +133,7 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-bottom: 50px;
 
 }
 .ProjectName {
@@ -140,7 +141,7 @@ a {
     /* background: linear-gradient(to top, rgb(255, 0, 217), rgb(179, 0, 255), rgb(88, 0, 106)); */
   
     -webkit-background-clip: text;
-    color: transparent;    font-size: 35pt;
+    color: transparent;    font-size: 55pt;
     font-family: Jura;
     font-weight: 700;
     
@@ -152,6 +153,7 @@ a {
     font-size: 20pt;
     font-family: Jura;
     font-weight: 500;
+    margin-top: 50px;
 }
 
 @media screen and (max-width: 750px) {
@@ -172,4 +174,58 @@ a {
     .ProjTitle {
         font-size: 20pt;
     }
+}
+
+
+.ProjectsDetails a {
+    color: white;
+    font-size: 30pt;
+    padding: 10px;
+    background-color: blueviolet;
+    border-radius: 20px;
+    
+}
+
+.ProjImgBox {
+    display: flex;
+    width: 80%;
+    height: 30vw;
+    padding-top: 50px;
+    padding-bottom: 10px;
+    justify-content: center;
+}
+@media screen and (max-width:800px) {
+    .ProjImgBox {
+        flex-direction: column;
+        width: 70%;
+        padding-top: 25vw;
+        padding-bottom: 20vw;
+    }
+    .ImgTwo {
+        display: none;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .ProjImgBox {
+        width: 90%;
+        padding-top: 40vw;
+        padding-bottom: 30vw;
+    }
+    
+}
+
+.ProjImgBox img {
+    border-top: 5px solid; /* Required for border-image */
+    border-bottom: 5px solid; /* Required for border-image */
+    border-image: linear-gradient(to right, red, blue, rgb(243, 16, 255), red) 1;
+}
+
+.ImgOne {
+    border: 5px solid; /* Required for border-image */
+    border-image: linear-gradient(to right, red, blue, rgb(243, 16, 255), red) 1;
+}
+.ImgTwo {
+    border: 5px solid; /* Required for border-image */
+    border-image: linear-gradient(to right, red, blue, rgb(243, 16, 255), red) 1;
 }

@@ -3,42 +3,36 @@ import '../index.css';
 import { Link } from 'react-router-dom';
 
 const Home = () => {
-    // Refs to track each InfoCont
     const infoRef1 = useRef(null);
 
     useEffect(() => {
-        // Create a new IntersectionObserver instance
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    // Add slide-in class when in view
                     entry.target.classList.add('slide-in');
                     entry.target.classList.remove('slide-out');
                 } else {
-                    // Optionally add slide-out class when out of view
                     entry.target.classList.add('slide-out');
                     entry.target.classList.remove('slide-in');
                 }
             });
         }, {
-            threshold: 0.1 // Trigger when 10% of the element is visible
+            threshold: 0.1 
         });
 
-        // Observe the .InfoCont elements
         if (infoRef1.current) {
             observer.observe(infoRef1.current);
         }
 
-        // Scroll-based star parallax effect
         const handleScroll = () => {
             const scrollPosition = window.scrollY;
             const stars1 = document.getElementById('stars');
             const stars2 = document.getElementById('stars2');
             const stars3 = document.getElementById('stars3');
 
-            if (stars1) stars1.style.transform = `translateY(${scrollPosition * 0.1}px)`; // Adjust multiplier for effect intensity
-            if (stars2) stars2.style.transform = `translateY(${scrollPosition * 0.2}px)`; // Adjust for different speeds
-            if (stars3) stars3.style.transform = `translateY(${scrollPosition * 0.3}px)`; // Adjust for different speeds
+            if (stars1) stars1.style.transform = `translateY(${scrollPosition * 0.1}px)`; 
+            if (stars2) stars2.style.transform = `translateY(${scrollPosition * 0.2}px)`; 
+            if (stars3) stars3.style.transform = `translateY(${scrollPosition * 0.3}px)`; 
         };
 
         window.addEventListener('scroll', handleScroll);
@@ -131,7 +125,6 @@ const Home = () => {
                             </Link>
                             </div>
                         </div>
-                        <img src="img/Brain.png" alt="" className="BlackHole"/>
 
 
                     </div>

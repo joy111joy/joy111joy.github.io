@@ -568,6 +568,9 @@ width: 30%;
   margin: 0;
   margin-bottom: 50px;
 }
+@media screen and(max-width: 410px) {
+
+}
 .TechScroll {
   height: 400px;
   width: 100%;
@@ -746,8 +749,16 @@ width: 30%;
     transform: perspective(1000px) rotateX(-12deg) rotateY(360deg); 
   }
 }
-
+.ProjCont h2 {
+  font-size: 70pt;
+  color: white;
+  position: relative;
+}
 @media screen and (max-width: 1100px) {
+  
+  .ProjCont {
+    padding-bottom: 200px;
+  }
 
   .ProjCont .slider .item {
     transform: 
@@ -767,8 +778,17 @@ width: 30%;
     left: calc(50% - 150px); /* Centering */
 
   }  
+  .ProjCont h2 {
+    top: -100px;
+  }
+
 }
-@media screen and (max-width:720px) {
+@media screen and (max-width:850px) {
+  .Brain {
+    top: -100px;
+  }
+}
+@media screen and (max-width: 720px) {
   .ProjCont .slider .item {
     transform: 
       rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg))
@@ -779,6 +799,16 @@ width: 30%;
     left: calc(50% - 125px); /* Centering */
 
   }
+
+}
+@media screen and (max-width: 500px) {
+  .ProjCont h2 {
+    top: -70px;
+    font-size: 50pt;
+  }
+  .ProjCont {
+    padding-bottom: 300px;
+  }
 }
 
 .ProjCont .slider .item img {
@@ -788,16 +818,12 @@ width: 30%;
   border: 1px solid #000000;
 }
 
-.BlackHole {
+.Brain {
   position: relative;
   top: 200px;
   width: 30%;
 }
-.ProjCont h2 {
-  font-size: 70pt;
-  color: white;
-  position: relative;
-}
+
 
 .ContactCont {
   position: relative;
@@ -809,7 +835,6 @@ width: 30%;
   position: relative;
   top: -150px;
 }
-
 .ContactCont p {
   font-size: 20pt;
   color: white;
@@ -818,6 +843,15 @@ width: 30%;
   width: 80%;
   left: calc(50% - 40%);
 }
+@media screen and (max-width:700px) {
+  .ContactCont h2 {
+    font-size: 7vwx;
+  }
+  .ContactCont p {
+    font-size: 15pt;
+  }
+}
+
 
 .ContactCont a {
   font-size: 30pt;
