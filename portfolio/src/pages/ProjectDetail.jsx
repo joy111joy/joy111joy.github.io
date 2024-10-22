@@ -19,7 +19,6 @@ const ProjectDetail = () => {
         <div id="stars3"></div>
       </div>
       <h1 className='ProjectName'>{project.name}</h1>
-      <Link to="https://profireworksnl.ca" target='blank'> View Site</Link>
       
       {/* Split description by '\n\n' and map to <p> tags */}
       <div className='ProjImgBox'>
