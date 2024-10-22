@@ -7,9 +7,9 @@ function Footer () {
         <Link>Mitchel Joy</Link>
       </div>
       <div className="footerLinks">
-        <Link>Home</Link>
-        <Link id="Alt">Projects</Link>
-        <Link>Contact</Link>
+        <Link to="/">Home</Link>
+        <Link to="/projects" id="Alt">Projects</Link>
+        <Link to="/contact" >Contact</Link>
       </div>
     </footer>
   )

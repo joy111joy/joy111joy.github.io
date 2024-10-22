@@ -830,10 +830,21 @@ width: 30%;
 }
 
 .ContactCont h2 {
-  font-size: 5vw;
+  font-size: 6.5vw;
   color: white;
   position: relative;
   top: -150px;
+}
+@media screen and (min-width:1200px) {
+  .ContactCont h2 {
+    font-size: 45pt;
+  }
+}
+@media screen and (min-width: 1500px) {
+  .ContactCont {
+    top: -600px;
+    margin-bottom: -450px;
+  }
 }
 .ContactCont p {
   font-size: 20pt;
