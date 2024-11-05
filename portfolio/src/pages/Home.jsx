@@ -69,7 +69,7 @@ const Home = () => {
                     <img src="img/HeadShot2.jpeg" alt="Profile" />
                     <div className="InfoText">
                         <h2>Hi! I’m <span id="Grad">Mitchel,</span><br /> A new-grad <span id="Grad">Web Developer.</span></h2>
-                        <p>I’m passionate about building clean, functional, and visually appealing websites. Recently graduated, I’ve been diving deep into front-end technologies like HTML, CSS, JavaScript, and React. I’m constantly learning new techniques and best practices to create seamless, responsive user experiences. <br /><br />
+                        <p>I’m passionate about building clean, functional, and visually appealing websites. Graduating in December, I’ve been diving deep into front-end technologies like HTML, CSS, JavaScript, and React. I’m constantly learning new techniques and best practices to create seamless, responsive user experiences. <br /><br />
                         In my spare time I strive to enhance my abilities by learning new technologies and features that can improve my design. I'm eager to apply my abilities to more real-world projects.</p>
                     </div>
                 </div>
